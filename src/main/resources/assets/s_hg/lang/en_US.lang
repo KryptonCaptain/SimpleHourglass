@@ -1,0 +1,19 @@
+# MISC
+itemGroup.s_hg=Simple Hourglass
+
+
+# Something that is not localized, translators, do NOT change this line.
+botaniamisc.noloc=botaniamisc.noloc
+
+botaniamisc.active=&aActive
+botaniamisc.inactive=&cInactive
+
+s_hg_misc.hourglassLock=This Hourglass is locked. Sneak right click it with an empty hand to unlock it.
+s_hg_misc.locked=Locked
+s_hg_misc.stopped=Stopped
+s_hg_misc.lockedStopped=Locked, Stopped
+
+
+# BLOCK NAMES
+
+tile.s_hg:hourglass.name=Hourglass
