@@ -1,4 +1,5 @@
 Simple Hourglass
+
 Sneak right click with an empty hand to lock and unlock.
 
 
