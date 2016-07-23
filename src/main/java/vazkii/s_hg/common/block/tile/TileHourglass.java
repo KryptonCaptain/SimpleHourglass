@@ -20,6 +20,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.StatCollector;
 import net.minecraft.util.StringUtils;
+import net.minecraftforge.common.util.ForgeDirection;
 
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
@@ -46,6 +47,22 @@ public class TileHourglass extends TileSimpleInventory {
 	@Override
 	public void updateEntity() {
 		super.updateEntity();
+		
+		//
+		boolean redstone = false;
+		for(ForgeDirection dir : ForgeDirection.VALID_DIRECTIONS) {
+			int redstoneSide = worldObj.getIndirectPowerLevelTo(xCoord + dir.offsetX, yCoord + dir.offsetY, zCoord + dir.offsetZ, dir.ordinal());
+			if(redstoneSide > 0) {
+				redstone = true;
+				move = false;
+				break;
+			} else {
+				move = true;
+			}
+				
+		}
+		//		
+		
 
 		int totalTime = getTotalTime();
 		if(totalTime > 0) {
