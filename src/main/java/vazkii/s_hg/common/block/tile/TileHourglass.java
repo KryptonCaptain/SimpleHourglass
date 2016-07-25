@@ -48,22 +48,6 @@ public class TileHourglass extends TileSimpleInventory {
 	public void updateEntity() {
 		super.updateEntity();
 		
-		//
-		boolean redstone = false;
-		for(ForgeDirection dir : ForgeDirection.VALID_DIRECTIONS) {
-			int redstoneSide = worldObj.getIndirectPowerLevelTo(xCoord + dir.offsetX, yCoord + dir.offsetY, zCoord + dir.offsetZ, dir.ordinal());
-			if(redstoneSide > 0) {
-				redstone = true;
-				move = false;
-				break;
-			} else {
-				move = true;
-			}
-				
-		}
-		//		
-		
-
 		int totalTime = getTotalTime();
 		if(totalTime > 0) {
 			if(move)
@@ -83,6 +67,23 @@ public class TileHourglass extends TileSimpleInventory {
 
 		if(flipTicks > 0)
 			flipTicks--;
+		
+		
+		//
+		boolean redstone = false;
+		for(ForgeDirection dir : ForgeDirection.VALID_DIRECTIONS) {
+			int redstoneSide = worldObj.getIndirectPowerLevelTo(xCoord + dir.offsetX, yCoord + dir.offsetY, zCoord + dir.offsetZ, dir.ordinal());
+			if(redstoneSide > 0) {
+				redstone = true;
+				move = false;
+				time = totalTime-1;
+				break;
+			} else {
+				move = true;
+			}
+				
+		}
+		//	
 	}
 
 	public int getTotalTime() {

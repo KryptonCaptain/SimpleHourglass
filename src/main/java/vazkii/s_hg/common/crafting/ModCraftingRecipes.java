@@ -38,6 +38,8 @@ public final class ModCraftingRecipes {
 
 
 	public static IRecipe recipeHourglass;
+	public static IRecipe recipeOpenCrate;
+	public static IRecipe recipeEnderEyeBlock;
 
 
 
@@ -53,6 +55,21 @@ public final class ModCraftingRecipes {
 				'R', "dustRedstone"
 		);
 		recipeHourglass = BotaniaAPI.getLatestAddedRecipe();
+		
+		// Open Crate Recipe
+		addOreDictRecipe(new ItemStack(ModBlocks.openCrate),
+				"WWW", "W W", "W W",
+				'W', "plankWood");
+		recipeOpenCrate = BotaniaAPI.getLatestAddedRecipe();
+
+					
+		// Ender Overseer Recipe
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.enderEye),
+				"RER", "EOE", "RER",
+				'R', "dustRedstone",
+				'E', new ItemStack(Items.ender_eye),
+				'O', new ItemStack(Blocks.obsidian)));
+		recipeEnderEyeBlock = BotaniaAPI.getLatestAddedRecipe();
 
 		
 		

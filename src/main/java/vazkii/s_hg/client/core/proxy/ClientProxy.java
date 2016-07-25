@@ -84,10 +84,7 @@ public class ClientProxy extends CommonProxy {
 		FMLCommonHandler.instance().bus().register(new ClientTickHandler());
 		MinecraftForge.EVENT_BUS.register(new HUDHandler());
 
-
 		MinecraftForge.EVENT_BUS.register(new DebugHandler());
-
-
 
 		initRenderers();
 	}
@@ -102,14 +99,9 @@ public class ClientProxy extends CommonProxy {
 
 		LibRenderIDs.idHourglass = RenderingRegistry.getNextAvailableRenderId();
 
-
 		RenderingRegistry.registerBlockHandler(new RenderHourglass());
 
-
-
 		ClientRegistry.bindTileEntitySpecialRenderer(TileHourglass.class, new RenderTileHourglass());
-
-
 
 	}
 

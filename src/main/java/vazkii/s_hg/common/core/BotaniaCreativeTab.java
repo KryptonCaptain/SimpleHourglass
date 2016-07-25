@@ -54,7 +54,8 @@ public final class BotaniaCreativeTab extends CreativeTabs {
 		this.list = list;
 
 		addBlock(ModBlocks.hourglass);
-
+		addBlock(ModBlocks.enderEye);
+		addBlock(ModBlocks.openCrate);
 
 	}
 

@@ -1,5 +1,5 @@
 # MISC
-itemGroup.s_hg=Simple Hourglass
+itemGroup.s_hg=Simple Redstone
 
 
 # Something that is not localized, translators, do NOT change this line.
@@ -17,3 +17,5 @@ s_hg_misc.lockedStopped=Locked, Stopped
 # BLOCK NAMES
 
 tile.s_hg:hourglass.name=Hourglass
+tile.s_hg:enderEyeBlock.name=Ender Observer
+tile.s_hg:openCrate0.name=Hollow Crate

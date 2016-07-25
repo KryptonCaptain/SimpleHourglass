@@ -13,6 +13,8 @@ package vazkii.s_hg.common.lib;
 public final class LibBlockNames {
 
 	public static final String HOURGLASS = "hourglass";
+	public static final String OPEN_CRATE = "openCrate";
+	public static final String ENDER_EYE_BLOCK = "enderEyeBlock";
 
 
 }

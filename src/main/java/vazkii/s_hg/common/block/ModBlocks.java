@@ -20,7 +20,9 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.oredict.OreDictionary;
 import vazkii.s_hg.api.BotaniaAPI;
 import vazkii.s_hg.client.lib.LibResources;
+import vazkii.s_hg.common.block.tile.TileEnderEye;
 import vazkii.s_hg.common.block.tile.TileHourglass;
+import vazkii.s_hg.common.block.tile.TileOpenCrate;
 import vazkii.s_hg.common.lib.LibBlockNames;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -28,12 +30,15 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public final class ModBlocks {
 
 	public static Block hourglass;
+	public static Block openCrate;
+	public static Block enderEye;
 
 
 	public static void init() {
 
 		hourglass = new BlockHourglass();
-
+		openCrate = new BlockOpenCrate();
+		enderEye = new BlockEnderEye();
 
 		initTileEntities();
 	}
@@ -42,7 +47,8 @@ public final class ModBlocks {
 	private static void initTileEntities() {
 
 		registerTile(TileHourglass.class, LibBlockNames.HOURGLASS);
-
+		registerTile(TileOpenCrate.class, LibBlockNames.OPEN_CRATE);
+		registerTile(TileEnderEye.class, LibBlockNames.ENDER_EYE_BLOCK);
 	}
 
 
