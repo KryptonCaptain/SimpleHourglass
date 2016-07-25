@@ -1,9 +1,9 @@
 [
 {
   "modid": "s_hg",
-  "name": "Simple Hourglass",
-  "description": "A simple timer that runs on sand.",
-  "version": "1.0",
+  "name": "Simple Redstone",
+  "description": "A simple timer, dropper and observation block.",
+  "version": "${version}",
   "mcversion": "1.7.10",
   "url": "",
   "updateUrl": "",
